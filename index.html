@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Catalogue Produits</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    .produit { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>📦 Catalogue de Produits</h1>
+  <div id="catalogue"></div>
+
+  <script>
+    async function chargerProduits() {
+      const res = await fetch("http://localhost:5000/api/produits");
+      const data = await res.json();
+
+      const div = document.getElementById("catalogue");
+      div.innerHTML = "";
+
+      data.forEach(prod => {
+        const avisHtml = prod.avis ? prod.avis.map(a => `<li>⭐ ${a.note} - ${a.commentaire}</li>`).join("") : "<em>Aucun avis</em>";
+        div.innerHTML += `
+          <div class="produit">
+            <h3>${prod.nom}</h3>
+            <p>💶 Prix : ${prod.prix} €</p>
+            <p>📦 Stock : ${prod.stock}</p>
+            <p>🗂️ Catégorie : ${prod.categorie}</p>
+            <h4>Avis :</h4>
+            <ul>${avisHtml}</ul>
+          </div>
+        `;
+      });
+    }
+
+    chargerProduits();
+  </script>
+</body>
+</html>
