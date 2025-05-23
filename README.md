@@ -1,5 +1,4 @@
-# Projet-NoSql
-DevLog - Application de Journalisation pour Développeurs
+# DevLog - Application de Journalisation pour Développeurs
 Description
 
 DevLog est une application web simple permettant aux développeurs de créer et gérer des journaux de développement (logs). Chaque log contient du texte libre, des technologies utilisées, une humeur, une date et peut être affiché dans une interface web conviviale.
