@@ -1,0 +1,38 @@
+[
+{
+"content": "Création de la structure initiale du projet Flask.",
+"technologies": ["Flask", "Python"],
+"mood": "motivé",
+"date": "2025-06-01T09:00:00"
+},
+{
+"content": "Connexion à MongoDB réussie, insertion de documents test OK.",
+"technologies": ["MongoDB", "PyMongo"],
+"mood": "productive",
+"date": "2025-06-01T14:30:00"
+},
+{
+"content": "Ajout du formulaire HTML pour saisir les journaux depuis l’interface.",
+"technologies": ["HTML", "Jinja", "Flask"],
+"mood": "focus",
+"date": "2025-06-02T10:15:00"
+},
+{
+"content": "Test de l’API REST avec Postman – les routes POST et GET fonctionnent.",
+"technologies": ["Postman", "REST", "Flask"],
+"mood": "satisfait",
+"date": "2025-06-02T17:45:00"
+},
+{
+"content": "Ajout de styles CSS simples pour rendre l’interface plus agréable.",
+"technologies": ["CSS", "HTML"],
+"mood": "créatif",
+"date": "2025-06-03T11:20:00"
+},
+{
+"content": "Bug corrigé sur le champ des technologies mal parsé.",
+"technologies": ["Flask", "Python"],
+"mood": "soulagé",
+"date": "2025-06-03T15:00:00"
+}
+]
