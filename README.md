@@ -1,25 +1,58 @@
-# DevLog - Application de Journalisation pour Développeurs
-Description
+# 💎 ObsidianLog
 
-DevLog est une application web simple permettant aux développeurs de créer et gérer des journaux de développement (logs). Chaque log contient du texte libre, des technologies utilisées, une humeur, une date et peut être affiché dans une interface web conviviale.
+ObsidianLog est une application web de journalisation à destination des développeurs. Elle permet de documenter quotidiennement ses sessions de code, d’exprimer son ressenti, de suivre les technologies utilisées et de mieux comprendre son propre rythme de travail. C’est un outil simple, élégant et personnel pour progresser dans sa pratique du développement logiciel.
 
-Cette application utilise Flask comme backend et serveur web, et MongoDB comme base de données NoSQL pour stocker les logs.
-Fonctionnalités
+---
 
-    Ajouter un nouveau journal de développement via formulaire web
+## 🚀 Fonctionnalités
 
-    Visualiser les logs récents avec détails (contenu, technologies, humeur, date)
+- ✍️ Ajout de journaux quotidiens avec :
+  - contenu libre
+  - humeur sélectionnable
+  - liste de technologies utilisées
+- 📅 Affichage des entrées de log récentes
+- 🎨 Interface en **thème sombre obsidien** (inspiré de l'éditeur Obsidian)
+- 🗂️ Utilisation de MongoDB pour stocker les données de manière flexible
 
-    Backend REST API prêt à être étendu (routes CRUD JSON possibles)
+---
 
-    Utilisation de MongoDB pour la flexibilité et le stockage de documents JSON
+## 🛠️ Stack technique
 
-Pourquoi MongoDB / NoSQL ?
+- **Frontend** : HTML, Bootstrap 5, CSS personnalisé
+- **Backend** : Python 3 + Flask
+- **Base de données** : MongoDB (NoSQL)
 
-    Les journaux ont des structures flexibles (tags, technologies, humeur, contenu variable)
+---
 
-    NoSQL permet de stocker des documents sans schéma rigide, facilitant les évolutions rapides
+## 📦 Installation & Lancement
 
-    Bonne gestion des données semi-structurées et non relationnelles
+1. **Cloner le projet**
+```bash
+git clone https://github.com/TitoDeluxe249/Projet-NoSql/
+```
+---
 
-    Plus adapté à un modèle orienté documents que SQL traditionnel
+2. **Créer et activer un environnement virtuel**
+```bash
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+3. **Installer les dépendances**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Configurer MongoDB**
+
+L’application utilise une base MongoDB locale (par défaut : mongodb://localhost:27017/)
+Nom de la base : devlog
+Collection : logs
+
+5. **Lancer l’application**
+```bash
+python app.py
+```
+L’application est disponible à l’adresse : http://127.0.0.1:5000/
+
+
